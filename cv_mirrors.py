@@ -14,7 +14,7 @@ def downloadFiles(pms):
         dir = "{}{}".format(pms["dir"],subDir)
         if os.path.exists(dir) == False :
             os.makedirs(dir)
-        os.system("aria2c -s 4 -c {} -d {}".format(link,dir))
+        os.system("aria2c -s 4 -c -l {} -d {}".format(link,dir))
 
 def getDirName(item):
     firstIndex = item.find("/opencv")
